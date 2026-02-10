@@ -1,0 +1,27 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8" />
+      <stop offset="50%" style="stop-color:#c084fc" />
+      <stop offset="100%" style="stop-color:#fb7185" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#818cf8" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  
+  <!-- Outer Glow Rings -->
+  <circle cx="256" cy="256" r="200" stroke="url(#logo-grad)" stroke-width="2" opacity="0.1" />
+  <circle cx="256" cy="256" r="170" stroke="url(#logo-grad)" stroke-width="4" opacity="0.2" />
+  
+  <!-- Main Circle -->
+  <circle cx="256" cy="256" r="120" fill="url(#logo-grad)" filter="url(#glow)" />
+  
+  <!-- Serenity Mark (Stylized 'tt' or Wave) -->
+  <path d="M200 256C200 225.072 225.072 200 256 200C286.928 200 312 225.072 312 256" stroke="white" stroke-width="12" stroke-linecap="round" opacity="0.9" />
+  <path d="M220 280C220 260.118 236.118 244 256 244C275.882 244 292 260.118 292 280" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.6" />
+  
+  <!-- Inner Core -->
+  <circle cx="256" cy="256" r="40" fill="white" opacity="0.2" />
+</svg>

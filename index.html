@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title> tik tik | Satisfying Serenity</title>
+    <meta name="description"
+        content="A relaxing, satisfying, and anti-stress game designed to calm your mind with smooth animations and gentle interactions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="tik tik">
+    <link rel="apple-touch-icon" href="./logo.svg">
+    <link rel="icon" type="image/svg+xml" href="./logo.svg">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Ultra-Premium Background -->
+        <div class="aurora">
+            <div class="aurora-blob blob-1"></div>
+            <div class="aurora-blob blob-2"></div>
+            <div class="aurora-blob blob-3"></div>
+        </div>
+
+        <div id="main-container">
+            <header>
+                <div class="header-content">
+                    <div class="logo-wrapper">
+                        <img src="./logo.svg" alt="tik tik logo" class="main-logo">
+                    </div>
+                    <h1 id="game-title">tik tik</h1>
+                    <p id="game-subtitle">Breathe. Relax. Create.</p>
+                </div>
+            </header>
+
+            <main>
+                <div id="game-canvas-container">
+                    <canvas id="game-canvas"></canvas>
+                    <div id="interaction-overlay"></div>
+                </div>
+            </main>
+
+            <footer>
+                <div class="controls-bar">
+                    <button id="btn-library" class="control-btn" title="Game Library">
+                        <span class="icon">📂</span>
+                        <span class="label">Library</span>
+                    </button>
+                    <div class="active-game-info">
+                        <span id="current-game-icon">🏜️</span>
+                        <span id="current-game-name">Zen Sand</span>
+                    </div>
+                    <button id="btn-restart" class="control-btn" title="Restart Session">
+                        <span class="icon">🔄</span>
+                    </button>
+                    <button id="btn-settings" class="control-btn" title="Settings">
+                        <span class="icon">⚙️</span>
+                    </button>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Glassmorphism Overlays -->
+        <div id="splash-screen" class="overlay">
+            <div class="splash-content">
+                <div class="logo-animation">
+                    <img src="./logo.svg" alt="tik tik logo" class="splash-logo">
+                    <div class="circle ripple-1"></div>
+                    <div class="circle ripple-2"></div>
+                </div>
+                <h2>tik tik</h2>
+                <p>Find your moment of peace</p>
+                <button id="start-btn">Begin Session</button>
+            </div>
+        </div>
+
+        <div id="settings-menu" class="overlay hidden">
+            <div class="modal glass">
+                <h3>Settings</h3>
+                <div class="setting-item">
+                    <span>Music</span>
+                    <input type="range" id="volume-music" min="0" max="100" value="50">
+                </div>
+                <div class="setting-item">
+                    <span>SFX</span>
+                    <input type="range" id="volume-sfx" min="0" max="100" value="70">
+                </div>
+                <div class="setting-item">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="dark-mode-toggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="setting-item" id="install-container" style="display: none;">
+                    <span>Install App</span>
+                    <button id="btn-install" class="control-btn"
+                        style="background: var(--primary-gradient); color: white; opacity: 1; padding: 0.5rem 1.5rem;">Install</button>
+                </div>
+                <button id="close-settings" class="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="library-overlay" class="overlay hidden">
+            <div class="library-container glass">
+                <div class="library-header">
+                    <h2>Zen Collection</h2>
+                    <div class="search-box">
+                        <input type="text" id="game-search" placeholder="Search 100+ satisfying experiences...">
+                    </div>
+                    <button id="close-library" class="close-btn">×</button>
+                </div>
+                <div id="game-grid" class="game-grid">
+                    <!-- 100 games will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

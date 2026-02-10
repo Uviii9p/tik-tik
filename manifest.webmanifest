@@ -1,0 +1,23 @@
+{
+    "name": "tik tik",
+    "short_name": "tik tik",
+    "description": "Satisfying Serenity and Anti-Stress Games",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#080a0f",
+    "theme_color": "#818cf8",
+    "icons": [
+        {
+            "src": "./logo.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "./logo.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "maskable"
+        }
+    ]
+}
